@@ -101,3 +101,19 @@
 
 })();
 
+// gsap animate for material description
+gsap.registerPlugin(ScrollTrigger); 
+gsap.from(".animate", {
+    opacity: 0,
+    y: 80,
+    duration: 1.5,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".animate",
+      scrub: 1,
+      toggleActions: "restart pause reverse pause",
+      start: "top 95%",
+      end: "bottom top"
+    }
+  });
+
