@@ -8,6 +8,9 @@
     margin: 0 auto;
   }
 
+  #model{
+    display: none;
+  }
   // Customize our own hotspot
   .Hotspot {
     background: url(../images/hotspot.svg) center no-repeat;
@@ -87,4 +90,18 @@
       .Hotspot {
         display: block;
       }
+  }
+
+  @media screen and (min-width:768px) {
+    .Hotspot {
+        display: block;
+      }
+
+    .static-img {
+        display: none;
+      }
+
+    #model {
+    display: block;
+  }
   }
