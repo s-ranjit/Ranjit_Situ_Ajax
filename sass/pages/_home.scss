@@ -1,5 +1,9 @@
 svg {
-    width: 15%;
+    width: 10%;
+    align-items: center;
+}
+.spinner {
+    text-align: center;
 }
 ul {
     margin: 0;
@@ -21,3 +25,11 @@ li:hover {
 .material {
     text-align: center;
 }
+.error-msg {
+    text-align: center;
+    margin: 20px 0;
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+

@@ -31,6 +31,7 @@
       console.log(error);
             const errorMessage = document.createElement("p");
             errorMessage.textContent = "Uh-oh! We ran into a little problem. Check your internet connection or try again soon!";
+            errorMessage.classList.add("error-msg");
             document.body.appendChild(errorMessage);
     });
   }
@@ -68,6 +69,7 @@
       console.log(error);
             const errorMessage = document.createElement("p");
             errorMessage.textContent = "Uh-oh! We ran into a little problem. Check your internet connection or try again soon!";
+            errorMessage.classList.add("error-msg");
       document.body.appendChild(errorMessage);
     });
   }
@@ -95,7 +97,7 @@
 // gsap animate for material description
 gsap.registerPlugin(ScrollTrigger); 
 gsap.from(".animate", {
-    opacity: 0,
+    opacity: 0.5,
     y: 80,
     duration: 1.5,
     ease: "power3.out",
