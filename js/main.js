@@ -5,8 +5,6 @@
   const materialTemplate = document.querySelector("#material-template");
   const materialList = document.querySelector("#material-list");
 
-  //This information needs to be removed then pulled with an AJAX Call using the Fetch API
-  //this is the api url https://swiftpixel.com/earbud/api/materials"
 
   //functions
   function loadInfoBoxes() {
@@ -30,14 +28,11 @@
     });
     })
     .catch(error => {
-      //make a meaningful error message and post to DOM
       console.log(error);
             const errorMessage = document.createElement("p");
-            errorMessage.textContent = "0ops something went wrong. It may be your internet connection or it might be us.Please try again later.";
-      
+            errorMessage.textContent = "Uh-oh! We ran into a little problem. Check your internet connection or try again soon!";
+            document.body.appendChild(errorMessage);
     });
-
-   
   }
   loadInfoBoxes();
 
@@ -45,14 +40,12 @@
 
      loader.classList.toggle("hidden");
 
-    //make AJAX Call here
+  
     fetch("https://swiftpixel.com/earbud/api/materials")
     .then(response => response.json())
     .then(materialListData=> {
       console.log(materialListData);
 
-
-   
 
     materialListData.forEach(material => {
       // clone the template li with h3 and p inside
@@ -74,10 +67,9 @@
       //make a meaningful error message and post to DOM
       console.log(error);
             const errorMessage = document.createElement("p");
-            errorMessage.textContent = "0ops something went wrong. It may be your internet connection or it might be us.Please try again later.";
-      
+            errorMessage.textContent = "Uh-oh! We ran into a little problem. Check your internet connection or try again soon!";
+      document.body.appendChild(errorMessage);
     });
-
   }
   loadMaterialInfo();
 
@@ -93,8 +85,7 @@
   }
 
   //Event listeners
-
-  hotspots.forEach(function (hotspot) {
+    hotspots.forEach(function (hotspot) {
     hotspot.addEventListener("mouseenter", showInfo);
     hotspot.addEventListener("mouseleave", hideInfo);
   });
