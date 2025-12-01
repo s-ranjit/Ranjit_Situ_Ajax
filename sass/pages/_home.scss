@@ -1,3 +1,20 @@
 svg {
     width: 20%;
 }
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    background-color: rgb(251, 198, 155);
+    list-style-type: none;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: background-color 0.4s ease;
+
+}
+
+li:hover {
+    background-color: rgb(225, 225, 225);
+}
